@@ -1,15 +1,5 @@
 const APIURL = 'https://api.github.com/users/'
 
-// axios.get(APIURL)
-//   .then(response => {
-//     // Manejar la respuesta de la API aquí
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     // Manejar errores de la API aquí
-//     console.error(error);
-//   });
-
 const form = document.getElementById('form');
 const searchInput = document.getElementById('search');
 const main = document.getElementById('main');
@@ -21,14 +11,14 @@ form.addEventListener('submit', function(event) {
 });
 
 function getUser(username) {
-  axios.get(`https://api.github.com/users/${username}`)
+  axios.get(`${APIURL}${username}`)
     .then(response => {
       const user = response.data;
       displayUser(user);
     })
     .catch(error => {
       console.error(error);
-      displayError('No se pudo obtener el perfil del usuario');
+      displayError('User profile not found');
     });
 };
 
