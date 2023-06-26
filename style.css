@@ -57,7 +57,7 @@ body {
 }
 
 .card {
-  max-width: 500px;
+  max-width: 300px;
   background-color: #4c2885;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
@@ -72,8 +72,10 @@ body {
 .avatar {
   border-radius: 50%;
   border: 10px solid #2a2a72;
-  height: 100px;
-  width: 100px;
+  max-width: 50px; 
+  max-height: 50px; 
+  width: auto; 
+  height: auto; 
   margin-bottom: 1rem;
 }
 
@@ -104,6 +106,10 @@ body {
 .user-info ul li strong {
   font-size: 0.9rem;
   margin-left: 0.5rem;
+}
+
+a {
+  background-color: rgb(24, 6, 36);
 }
 
 .repo {
